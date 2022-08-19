@@ -1,12 +1,22 @@
-for (let i = 0; i < 3; i++) {
+for (let i = 0; i < 1; i++) {
     let nombre = prompt("Ingrese su nombre")
-    document.write("<br>" + nombre + " ")
     let salary = parseInt(prompt("Ingrese su salario"))
-    document.write("su salario es: $" + salary)
     let workingHours = parseInt(prompt("Cuantas horas trabaja?"))
-    document.write("<br>" + "Cantidad de horas trabajadas :" + workingHours + "hs")
     let salaryPerHour = salary / workingHours
-    document.write ( "<br>" + "Su ganancia por hora es: " + salaryPerHour)
+
+    function salario() {
+        let oracion = `${nombre} su salario es: $${salary} <br>`
+        document.write(oracion)
+    }
+    salario(nombre,salary)
+
+    function horas() {
+        let salarioXhora = `Cantidad de horas trabajadas : ${workingHours} hs <br>
+        Su ganancia por hora es: ${salaryPerHour}`
+        document.write(salarioXhora)
+    }
+    horas(workingHours, salaryPerHour)
+
     if(salary >= 2000 && salary < 3000) {
         document.write("<br>" + "Su cargo es : Gerente" + "<br>")
     } else if (salary < 2000) {
