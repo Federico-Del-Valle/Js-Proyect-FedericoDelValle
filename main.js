@@ -1,4 +1,5 @@
-for (let i = 0; i < 1; i++) {
+const empleados = []
+for (let i = 0; i < 3; i++) {
     let nombre = prompt("Ingrese su nombre")
     let salary = parseInt(prompt("Ingrese su salario"))
     let workingHours = parseInt(prompt("Cuantas horas trabaja?"))
@@ -7,7 +8,9 @@ for (let i = 0; i < 1; i++) {
     function salario() {
         let oracion = `${nombre} su salario es: $${salary} <br>`
         document.write(oracion)
+        empleados.push(nombre)
     }
+    console.log(empleados)
     salario(nombre,salary)
 
     function horas() {
@@ -25,3 +28,5 @@ for (let i = 0; i < 1; i++) {
         document.write("<br>" + "Su cargo es : Dueño" + "<br>")
     }
 }
+
+
