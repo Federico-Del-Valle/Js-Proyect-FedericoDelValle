@@ -41,3 +41,26 @@ p{
 h2{
     text-align: center;
 }
+.container_questions{
+    width: 500px;
+    height: 250px;
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 30px;
+}
+label{
+    display: block;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+input{
+    display: block;
+    width: 200px;
+}
+button{
+    padding: 10px 10px;
+    margin-top: 5px;
+    color: #fff;
+    background-color: #772299;
+    border-radius: 5px;
+}
