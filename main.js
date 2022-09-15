@@ -31,6 +31,7 @@ btnForm.addEventListener("click", function() {
     showData()
     let myDataJson = JSON.stringify(myData)
     console.log(myDataJson)
+    localStorage.setItem("myData", myDataJson)
 })
 
 
@@ -40,7 +41,6 @@ function showData() {
     let salarySaved = ""
     let hoursSaved = ""
     for ( let i = 0; i < empleados.length; i++){
-        localStorage.setItem("nombreEmpleado", empleados[i])
 
         namesSaved +=` 
         <li> ${empleados[i]} </li>`
