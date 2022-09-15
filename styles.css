@@ -34,6 +34,7 @@ p{
     color: #772299;
     padding: 20px;
     margin: 0 20px;
+    overflow: scroll;
 }
 .container-cargo p{
     color: #772299;
@@ -63,4 +64,7 @@ button{
     color: #fff;
     background-color: #772299;
     border-radius: 5px;
+}
+li{
+    color: #111;
 }
