@@ -6,6 +6,7 @@ const cargos = {
     cargo2: "gerente",
     cargo3: "jefe"
 }
+let {cargo1, cargo2, cargo3} = cargos
 let myData = {
     nombre: empleados,
     salario: salary,
@@ -18,7 +19,8 @@ let btnForm = document.querySelector("#btn-form");
 let ulName = document.querySelector("#ul-name");
 let ulSalary = document.querySelector("#ul-salary");
 let ulHours = document.querySelector("#ul-hours");
-let messageCargo = document.querySelector(".cargo")
+let ulCargo = document.querySelector(".cargo")
+
 
 
 btnForm.addEventListener("click", function() {
@@ -32,6 +34,7 @@ btnForm.addEventListener("click", function() {
     let myDataJson = JSON.stringify(myData)
     console.log(myDataJson)
     localStorage.setItem("myData", myDataJson)
+    salaryFunction(empleados)
 })
 
 
@@ -58,10 +61,8 @@ function showData() {
     ulHours.innerHTML = hoursSaved
 }
 
-if(salary >= 2000 && salary < 3000) {
-    messageCargo.textContent += " " + cargos.cargo1
-} else if (salary < 2000) {
-    messageCargo.textContent += " " + cargos.cargo2
-} else {
-    messageCargo.textContent += " " + cargos.cargo3
+function salaryFunction(name) {
+    (salary >= 2000) ? ulCargo.textContent += name + " " + cargo1 
+    : (salary < 2000) ? ulCargo.textContent += name + " " + cargo2 
+    : ulCargo.textContent += name + " " + cargo3
 }

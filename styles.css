@@ -18,9 +18,8 @@ p{
 }
 .container{
     width: 1000px;
-    height: 500px;
     background-color: #fff;
-    margin: 30px auto 0;
+    margin: 30px auto 20px;
     padding: 30px;
     display: flex;
     flex-wrap: wrap;
