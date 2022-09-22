@@ -16,12 +16,31 @@ let nameForm = document.querySelector("#name-form");
 let salaryForm = document.querySelector("#salary-form");
 let hoursForm = document.querySelector("#hours-form");
 let btnForm = document.querySelector("#btn-form");
+let btnFormErase = document.querySelector("#btn-form-erase");
 let ulName = document.querySelector("#ul-name");
 let ulSalary = document.querySelector("#ul-salary");
 let ulHours = document.querySelector("#ul-hours");
 let ulCargo = document.querySelector(".cargo")
 
-
+btnFormErase.addEventListener("click", function() {
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+        Swal.fire(
+            'Deleted!',
+            'Your file has been deleted.',
+            'success'
+        )
+        }
+    })
+})
 
 btnForm.addEventListener("click", function() {
     empleados.push(nameForm.value)
@@ -35,6 +54,7 @@ btnForm.addEventListener("click", function() {
     console.log(myDataJson)
     localStorage.setItem("myData", myDataJson)
     salaryFunction(empleados)
+    Swal.fire('Empleado añadido')
 })
 
 
@@ -54,7 +74,7 @@ function showData() {
     }
     for ( let i = 0; i < hours.length; i++){
         hoursSaved +=` 
-        <li> ${hours[i]} ${"hs"} </li>`
+        <li > ${hours[i]} ${"hs"} </li>`
     }
     ulName.innerHTML = namesSaved
     ulSalary.innerHTML = salarySaved
