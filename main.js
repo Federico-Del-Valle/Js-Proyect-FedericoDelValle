@@ -21,6 +21,23 @@ let ulName = document.querySelector("#ul-name");
 let ulSalary = document.querySelector("#ul-salary");
 let ulHours = document.querySelector("#ul-hours");
 let ulCargo = document.querySelector(".cargo")
+document.getElementById("jsonBtn").addEventListener("click", cargarJSON);
+
+function cargarJSON() {
+    fetch('empleados.json')
+        .then(function(res) {
+            return res.json()
+        })
+        .then(function(data) {
+            let html = "";
+            data.forEach(function(empleado){
+                html += `
+                            <li>${empleado.nombre} ${empleado.puesto}</li>
+                            `
+            })
+            document.getElementById('resultado').innerHTML = html
+        })
+}
 
 btnFormErase.addEventListener("click", function() {
     Swal.fire({

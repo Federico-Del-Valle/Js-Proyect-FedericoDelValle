@@ -1,0 +1,14 @@
+[
+    {
+        "nombre" : "juan",
+        "puesto" : "empleado"
+    },
+    {
+        "nombre" : "Fede",
+        "puesto" : "gerente"
+    },
+    {
+        "nombre" : "Lucas",
+        "puesto" : "dueño"
+    }
+]

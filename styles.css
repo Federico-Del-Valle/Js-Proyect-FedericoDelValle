@@ -74,3 +74,13 @@ footer{
 footer p {
     color: #111;
 }
+.button{
+    background-color: #fff;
+    padding: 10px;
+    margin: 20px;
+}
+#resultado{
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 30px;
+}
